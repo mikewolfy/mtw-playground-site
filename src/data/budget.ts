@@ -12,39 +12,44 @@ export interface BudgetCategory {
 export const BUDGET_CATEGORIES: BudgetCategory[] = [
   {
     label: 'Play structures & equipment',
-    description: 'Two play systems for ages 5–12: slides, climbers, and multiple entry points',
+    description:
+      'A more elaborate play system for ages 5–12: dual towers, a climbing wall, bridge, slide, fireman\'s pole, spring riders, spinner, and seesaw',
     items: [
-      { label: 'Primary play structure (ages 8–12, multi-deck with slides & climbers)', amount: 28000 },
-      { label: 'Secondary play structure (ages 5–7, lower deck height)', amount: 14000 },
-      { label: 'Spring rider / standalone spinner', amount: 2500 },
-      { label: 'Freight & delivery', amount: 3500 },
+      { label: 'Primary play tower (ages 8–12, roofed deck with slide & fireman\'s pole)', amount: 30000 },
+      { label: 'Secondary climbing tower (ages 5–7, climbing wall entry)', amount: 14000 },
+      { label: 'Connecting bridge between towers', amount: 4000 },
+      { label: 'Spring riders (2)', amount: 3000 },
+      { label: 'Standalone spinner', amount: 2500 },
+      { label: 'Seesaw', amount: 1500 },
+      { label: 'Monkey bars add-on', amount: 2000 },
+      { label: 'Freight & delivery', amount: 3000 },
     ],
   },
   {
     label: 'Installation & labor',
     description: 'Certified crew to assemble, anchor, and safety-check all equipment',
     items: [
-      { label: 'Certified installation crew (labor)', amount: 13000 },
-      { label: 'Equipment anchoring & concrete footings', amount: 3500 },
-      { label: 'Post-install safety inspection & certification', amount: 1500 },
+      { label: 'Certified installation crew (labor)', amount: 9500 },
+      { label: 'Equipment anchoring & concrete footings', amount: 2500 },
+      { label: 'Post-install safety inspection & certification', amount: 1000 },
     ],
   },
   {
     label: 'Safety surfacing',
     description: 'ASTM-compliant engineered wood fiber mulch under and around all equipment',
     items: [
-      { label: 'Engineered wood fiber mulch (material)', amount: 7000 },
-      { label: 'Surfacing installation & compaction', amount: 3500 },
-      { label: 'ASTM fall-height compliance testing', amount: 1500 },
+      { label: 'Engineered wood fiber mulch (material)', amount: 5000 },
+      { label: 'Surfacing installation & compaction', amount: 2000 },
+      { label: 'ASTM fall-height compliance testing', amount: 1000 },
     ],
   },
   {
     label: 'Site preparation & grading',
     description: 'Clearing, grading, and drainage prep for the play area footprint',
     items: [
-      { label: 'Clearing & tree/root removal', amount: 2500 },
-      { label: 'Excavation & grading', amount: 3500 },
-      { label: 'Subgrade drainage prep', amount: 2000 },
+      { label: 'Clearing & tree/root removal', amount: 1500 },
+      { label: 'Excavation & grading', amount: 2500 },
+      { label: 'Subgrade drainage prep', amount: 1000 },
     ],
   },
   {
