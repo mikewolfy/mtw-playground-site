@@ -230,6 +230,146 @@
   background: var(--teal-dark);
 }
 
+/* Budget breakdown */
+.budget h2 {
+  margin-bottom: 0.35rem;
+}
+
+.budget-intro {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  margin: 0 0 1.25rem;
+  max-width: 42rem;
+}
+
+.budget-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+}
+
+.budget-row {
+  padding: 0.15rem 0.25rem;
+  border-radius: 0.5rem;
+  transition: background-color 0.15s ease;
+}
+
+.budget-row:hover,
+.budget-row:focus-within {
+  background: color-mix(in srgb, var(--teal) 6%, transparent);
+}
+
+.budget-row summary {
+  cursor: pointer;
+  list-style: none;
+  position: relative;
+  padding-right: 1.5rem;
+}
+
+.budget-row summary::-webkit-details-marker {
+  display: none;
+}
+
+.budget-row summary::after {
+  content: '▸';
+  position: absolute;
+  top: 0.1rem;
+  right: 0;
+  color: var(--text-muted);
+  font-size: 0.85rem;
+  transition: transform 0.15s ease;
+}
+
+.budget-row details[open] summary::after {
+  transform: rotate(90deg);
+}
+
+.budget-row-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 1rem;
+  margin-bottom: 0.35rem;
+}
+
+.budget-label {
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.budget-amount {
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: var(--teal-dark);
+  white-space: nowrap;
+}
+
+.budget-pct {
+  font-weight: 500;
+  color: var(--text-muted);
+}
+
+.budget-track {
+  background: var(--border);
+  border-radius: 4px;
+  height: 14px;
+  overflow: hidden;
+}
+
+.budget-fill {
+  height: 100%;
+  background: var(--teal);
+  border-radius: 4px;
+  min-width: 4px;
+}
+
+.budget-description {
+  color: var(--text-muted);
+  font-size: 0.85rem;
+  margin: 0.4rem 0 0;
+}
+
+.budget-items {
+  list-style: none;
+  margin: 0.75rem 0 0.25rem;
+  padding: 0.75rem 0 0;
+  border-top: 1px dashed var(--border);
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+}
+
+.budget-item {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+.budget-item span:last-child {
+  color: var(--text);
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.budget-total {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1.5rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border);
+  font-weight: 700;
+  font-size: 1.05rem;
+}
+
+.budget-total span:last-child {
+  color: var(--teal-dark);
+}
+
 /* Milestones */
 .milestone-list {
   list-style: none;
