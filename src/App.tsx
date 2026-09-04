@@ -9,6 +9,7 @@ import Milestones from './components/Milestones'
 import BudgetBreakdown from './components/BudgetBreakdown'
 import PlaygroundIllustration from './components/PlaygroundIllustration'
 import OurStory from './components/OurStory'
+import PlayQuotes from './components/PlayQuotes'
 import './App.css'
 
 export default function App() {
@@ -95,6 +96,10 @@ export default function App() {
       </header>
 
       <main className="content">
+        <section className="panel-wide">
+          <PlayQuotes />
+        </section>
+
         <section className="panel">
           <DonationForm onAdd={addDonation} />
         </section>
