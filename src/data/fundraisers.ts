@@ -17,7 +17,7 @@ export const PAST_FUNDRAISERS: PastFundraiser[] = [
   { name: 'Pizza Night', organizer: 'Lisa', date: '2026-08-01', amount: 265 },
   { name: 'Ornament Sale', organizer: 'Katie', date: '2026-07-18', amount: 240 },
   { name: 'Ice Cream Day', organizer: 'Lisa', date: '2026-06-27', amount: 310 },
-  { name: 'Lap-a-thon', organizer: 'Lisa', date: '2026-06-13', amount: 1500 },
+  { name: 'Lap-a-thon', organizer: 'Lisa', date: '2026-06-13', amount: 2365 },
   { name: 'Ice Cream Day', organizer: 'Lisa', date: '2026-05-30', amount: 280 },
 ]
 
