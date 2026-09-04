@@ -8,6 +8,7 @@ import DonorList from './components/DonorList'
 import Milestones from './components/Milestones'
 import BudgetBreakdown from './components/BudgetBreakdown'
 import PlaygroundIllustration from './components/PlaygroundIllustration'
+import OurStory from './components/OurStory'
 import './App.css'
 
 export default function App() {
@@ -56,6 +57,7 @@ export default function App() {
           Help us replace the old play structure at Queensmill Park with something
           our kids (and knees) deserve.
         </p>
+        <OurStory />
         <ProgressThermometer raised={raised} goal={state.goal} />
         <StatsRow
           raised={raised}
