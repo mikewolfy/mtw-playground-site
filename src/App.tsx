@@ -6,6 +6,7 @@ import StatsRow from './components/StatsRow'
 import DonationForm from './components/DonationForm'
 import DonorList from './components/DonorList'
 import Milestones from './components/Milestones'
+import BudgetBreakdown from './components/BudgetBreakdown'
 import PlaygroundIllustration from './components/PlaygroundIllustration'
 import './App.css'
 
@@ -98,6 +99,10 @@ export default function App() {
 
         <section className="panel">
           <Milestones raised={raised} goal={state.goal} />
+        </section>
+
+        <section className="panel panel-wide">
+          <BudgetBreakdown />
         </section>
 
         <section className="panel panel-wide">
