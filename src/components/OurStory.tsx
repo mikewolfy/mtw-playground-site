@@ -11,10 +11,11 @@ export default function OurStory() {
       </p>
       <p>
         It's done its job well. But thirty years is a long time for playground
-        equipment, and it shows: worn surfacing, aging structures, and a
-        footprint that was never built for a neighborhood this size. Queensmill
-        keeps growing — more families move in every year — and our kids deserve
-        a play space that grows with them.
+        equipment, and it shows: worn surfacing, rusting hardware, and aging
+        structures that no longer meet today's safety standards. What used to
+        be simple wear and tear has become a real safety concern — and
+        Queensmill keeps growing, with more families moving in every year. Our
+        kids deserve a play space that's both safe and built to last.
       </p>
       <p>
         That's why we're raising funds for a new playground: safe, modern, and
