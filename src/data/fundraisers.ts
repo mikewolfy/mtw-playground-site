@@ -26,7 +26,8 @@ export const UPCOMING_FUNDRAISERS: UpcomingFundraiser[] = [
     name: 'Fall Craft Fair',
     organizer: 'Lisa',
     date: '2026-10-17',
-    description: 'Ornaments and handmade crafts for sale',
+    description:
+      'Handmade crafts, Christmas ornaments, poinsettias, and other Halloween and holiday gifts for sale',
   },
 ]
 
