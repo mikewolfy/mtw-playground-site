@@ -11,6 +11,10 @@ const QUOTES = [
     text: "Play is our brain's favorite way of learning.",
     author: 'Diane Ackerman, author of Deep Play',
   },
+  {
+    text: 'Play is the highest form of research.',
+    author: 'Often attributed to Albert Einstein',
+  },
 ]
 
 export default function PlayQuotes() {
