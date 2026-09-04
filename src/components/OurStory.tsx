@@ -6,8 +6,8 @@ export default function OurStory() {
         Queensmill was built in 1993 — and our playground went in around the same
         time. For more than thirty years, it's been where neighborhood kids have
         taken their first steps off a slide, made their first friends on the
-        monkey bars, and spent countless summer evenings playing until the
-        streetlights came on.
+        monkey bars, and spent countless summer evenings playing until it was
+        too dark to see.
       </p>
       <p>
         It's done its job well. But thirty years is a long time for playground
