@@ -6,6 +6,7 @@ import StatsRow from './components/StatsRow'
 import DonationForm from './components/DonationForm'
 import DonorList from './components/DonorList'
 import Milestones from './components/Milestones'
+import PlaygroundIllustration from './components/PlaygroundIllustration'
 import './App.css'
 
 export default function App() {
@@ -45,6 +46,9 @@ export default function App() {
 
   return (
     <div className="page">
+      <div className="hero-image">
+        <PlaygroundIllustration />
+      </div>
       <header className="hero">
         <h1>Queensmill Playground Fund</h1>
         <p className="tagline">
