@@ -122,6 +122,13 @@
 }
 
 /* Stats */
+.raised-note {
+  max-width: 34rem;
+  margin: 0.6rem auto 0;
+  color: var(--text-muted);
+  font-size: 0.85rem;
+}
+
 .stats-row {
   display: flex;
   justify-content: center;
@@ -560,6 +567,85 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+/* Fundraisers */
+.fundraisers-intro {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  margin: 0 0 1.25rem;
+  max-width: 42rem;
+}
+
+.fundraisers-subhead {
+  font-size: 0.95rem;
+  margin: 1.5rem 0 0.75rem;
+}
+
+.fundraisers-subhead:first-of-type {
+  margin-top: 0;
+}
+
+.fundraiser-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.fundraiser-item {
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 0.75rem;
+}
+
+.fundraiser-item:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.fundraiser-item-main {
+  display: flex;
+  justify-content: space-between;
+  font-weight: 600;
+}
+
+.fundraiser-amount {
+  color: var(--teal-dark);
+}
+
+.fundraiser-meta {
+  color: var(--text-muted);
+  font-size: 0.82rem;
+  margin-top: 0.15rem;
+}
+
+.fundraiser-description {
+  color: var(--text-muted);
+  font-size: 0.85rem;
+  margin: 0.35rem 0 0;
+}
+
+.fundraiser-total {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 0.9rem;
+  padding-top: 0.75rem;
+  border-top: 1px solid var(--border);
+  font-weight: 700;
+  font-size: 0.95rem;
+}
+
+.fundraiser-total span:last-child {
+  color: var(--teal-dark);
+}
+
+.fundraisers-empty {
+  color: var(--text-muted);
+  font-style: italic;
+  font-size: 0.9rem;
+  margin: 0;
 }
 
 /* Footer */
