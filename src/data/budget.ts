@@ -1,60 +1,113 @@
-export interface BudgetItem {
+export interface BudgetLineItem {
   label: string
   amount: number
-  description: string
 }
 
-export const BUDGET_ITEMS: BudgetItem[] = [
+export interface BudgetCategory {
+  label: string
+  description: string
+  items: BudgetLineItem[]
+}
+
+export const BUDGET_CATEGORIES: BudgetCategory[] = [
   {
     label: 'Play structures & equipment',
-    amount: 48000,
     description: 'Two play systems for ages 5–12: slides, climbers, and multiple entry points',
+    items: [
+      { label: 'Primary play structure (ages 8–12, multi-deck with slides & climbers)', amount: 28000 },
+      { label: 'Secondary play structure (ages 5–7, lower deck height)', amount: 14000 },
+      { label: 'Spring rider / standalone spinner', amount: 2500 },
+      { label: 'Freight & delivery', amount: 3500 },
+    ],
   },
   {
     label: 'Installation & labor',
-    amount: 18000,
     description: 'Certified crew to assemble, anchor, and safety-check all equipment',
+    items: [
+      { label: 'Certified installation crew (labor)', amount: 13000 },
+      { label: 'Equipment anchoring & concrete footings', amount: 3500 },
+      { label: 'Post-install safety inspection & certification', amount: 1500 },
+    ],
   },
   {
     label: 'Safety surfacing',
-    amount: 12000,
     description: 'ASTM-compliant engineered wood fiber mulch under and around all equipment',
+    items: [
+      { label: 'Engineered wood fiber mulch (material)', amount: 7000 },
+      { label: 'Surfacing installation & compaction', amount: 3500 },
+      { label: 'ASTM fall-height compliance testing', amount: 1500 },
+    ],
   },
   {
     label: 'Site preparation & grading',
-    amount: 8000,
     description: 'Clearing, grading, and drainage prep for the play area footprint',
+    items: [
+      { label: 'Clearing & tree/root removal', amount: 2500 },
+      { label: 'Excavation & grading', amount: 3500 },
+      { label: 'Subgrade drainage prep', amount: 2000 },
+    ],
   },
   {
     label: 'ADA-accessible pathways',
-    amount: 7000,
     description: 'Accessible route connecting parking, seating, and the play area',
+    items: [
+      { label: 'Poured concrete accessible path', amount: 5000 },
+      { label: 'Accessible transfer point at play structure', amount: 1500 },
+      { label: 'Path signage', amount: 500 },
+    ],
   },
   {
     label: 'Borders & drainage',
-    amount: 6000,
     description: 'Containment edging and subsurface drainage under the surfacing',
+    items: [
+      { label: 'Playground border / edging', amount: 3500 },
+      { label: 'Subsurface drainage piping & gravel base', amount: 2000 },
+      { label: 'Weed barrier fabric', amount: 500 },
+    ],
   },
   {
     label: 'Shade structure',
-    amount: 6000,
     description: 'Fabric shade sail over the main play structure',
+    items: [
+      { label: 'Shade sail fabric & hardware', amount: 3500 },
+      { label: 'Steel posts & footings', amount: 2000 },
+      { label: 'Installation labor', amount: 500 },
+    ],
   },
   {
     label: 'Benches & site furnishings',
-    amount: 5000,
     description: 'Benches, trash receptacles, and a bike rack for parents and caregivers',
+    items: [
+      { label: 'Park benches (3)', amount: 2400 },
+      { label: 'Trash & recycling receptacles (2)', amount: 1200 },
+      { label: 'Bike rack', amount: 600 },
+      { label: 'Furnishing installation', amount: 800 },
+    ],
   },
   {
     label: 'Design, engineering & permits',
-    amount: 3000,
     description: 'Site plan, safety review, and permitting fees',
+    items: [
+      { label: 'Site plan & landscape design', amount: 1500 },
+      { label: 'Structural / engineering review', amount: 1000 },
+      { label: 'Municipal permit fees', amount: 500 },
+    ],
   },
   {
     label: 'Contingency',
-    amount: 2000,
     description: 'Buffer for material cost changes and unforeseen site conditions',
+    items: [
+      { label: 'Material price contingency', amount: 1200 },
+      { label: 'Unforeseen site conditions', amount: 800 },
+    ],
   },
 ]
 
-export const BUDGET_TOTAL = BUDGET_ITEMS.reduce((sum, item) => sum + item.amount, 0)
+export function categoryTotal(category: BudgetCategory): number {
+  return category.items.reduce((sum, item) => sum + item.amount, 0)
+}
+
+export const BUDGET_TOTAL = BUDGET_CATEGORIES.reduce(
+  (sum, category) => sum + categoryTotal(category),
+  0,
+)
