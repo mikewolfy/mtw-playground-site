@@ -3,7 +3,7 @@ import type { FundState } from './types'
 const STORAGE_KEY = 'mtw-playground-fund-v1'
 
 const SEED_STATE: FundState = {
-  goal: 45000,
+  goal: 115000,
   donations: [
     {
       id: 'seed-1',
