@@ -54,6 +54,7 @@ export default function Fundraisers() {
               <div className="fundraiser-meta">
                 {dateFormat.format(new Date(f.date))} &middot; Organized by {f.organizer}
               </div>
+              {f.description && <p className="fundraiser-description">{f.description}</p>}
             </li>
           ))}
         </ul>

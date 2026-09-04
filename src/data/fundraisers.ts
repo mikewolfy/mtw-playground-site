@@ -9,6 +9,7 @@ export interface UpcomingFundraiser {
   name: string
   organizer: string
   date: string // ISO date
+  description?: string
 }
 
 export const PAST_FUNDRAISERS: PastFundraiser[] = [
@@ -20,7 +21,14 @@ export const PAST_FUNDRAISERS: PastFundraiser[] = [
   { name: 'Ice Cream Day', organizer: 'Lisa', date: '2026-05-30', amount: 280 },
 ]
 
-export const UPCOMING_FUNDRAISERS: UpcomingFundraiser[] = []
+export const UPCOMING_FUNDRAISERS: UpcomingFundraiser[] = [
+  {
+    name: 'Fall Craft Fair',
+    organizer: 'Lisa',
+    date: '2026-10-17',
+    description: 'Ornaments and handmade crafts for sale',
+  },
+]
 
 export const PAST_FUNDRAISERS_TOTAL = PAST_FUNDRAISERS.reduce(
   (sum, f) => sum + f.amount,
