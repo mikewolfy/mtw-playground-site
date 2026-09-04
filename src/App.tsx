@@ -1,6 +1,7 @@
 import { useEffect, useMemo, useState } from 'react'
 import type { Donation, FundState } from './types'
 import { loadState, saveState } from './storage'
+import { PAST_FUNDRAISERS_TOTAL } from './data/fundraisers'
 import ProgressThermometer from './components/ProgressThermometer'
 import StatsRow from './components/StatsRow'
 import DonationForm from './components/DonationForm'
@@ -10,7 +11,14 @@ import BudgetBreakdown from './components/BudgetBreakdown'
 import PlaygroundIllustration from './components/PlaygroundIllustration'
 import OurStory from './components/OurStory'
 import PlayQuotes from './components/PlayQuotes'
+import Fundraisers from './components/Fundraisers'
 import './App.css'
+
+const currency = new Intl.NumberFormat('en-US', {
+  style: 'currency',
+  currency: 'USD',
+  maximumFractionDigits: 0,
+})
 
 export default function App() {
   const [state, setState] = useState<FundState>(() => loadState())
@@ -21,12 +29,14 @@ export default function App() {
     saveState(state)
   }, [state])
 
-  const raised = useMemo(
+  const onlineRaised = useMemo(
     () => state.donations.reduce((sum, d) => sum + d.amount, 0),
     [state.donations],
   )
 
-  const averageGift = state.donations.length > 0 ? raised / state.donations.length : 0
+  const raised = onlineRaised + PAST_FUNDRAISERS_TOTAL
+
+  const averageGift = state.donations.length > 0 ? onlineRaised / state.donations.length : 0
 
   function addDonation(donation: Donation) {
     setState((prev) => ({ ...prev, donations: [...prev.donations, donation] }))
@@ -60,6 +70,11 @@ export default function App() {
         </p>
         <OurStory />
         <ProgressThermometer raised={raised} goal={state.goal} />
+        <p className="raised-note">
+          Includes {currency.format(PAST_FUNDRAISERS_TOTAL)} raised at neighborhood
+          fundraisers (ice cream days, a lap-a-thon, an ornament sale, and pizza
+          night) — see the full list below.
+        </p>
         <StatsRow
           raised={raised}
           goal={state.goal}
@@ -110,6 +125,10 @@ export default function App() {
 
         <section className="panel panel-wide">
           <BudgetBreakdown />
+        </section>
+
+        <section className="panel panel-wide">
+          <Fundraisers />
         </section>
 
         <section className="panel panel-wide">
