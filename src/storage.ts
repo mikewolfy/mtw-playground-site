@@ -22,7 +22,7 @@ const SEED_STATE: FundState = {
     },
     {
       id: 'seed-3',
-      name: 'Terrace West HOA',
+      name: 'Queensmill HOA',
       amount: 5000,
       message: 'Matching the first $5,000 raised.',
       anonymous: false,

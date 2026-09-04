@@ -1,4 +1,4 @@
-# Maple Terrace West Playground Fund
+# Queensmill Playground Fund
 
 A small reactive site for tracking our neighborhood's fundraising progress toward
 a new playground: a live progress bar toward the goal, milestones, a donor list,

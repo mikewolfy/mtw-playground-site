@@ -46,9 +46,9 @@ export default function App() {
   return (
     <div className="page">
       <header className="hero">
-        <h1>Maple Terrace West Playground Fund</h1>
+        <h1>Queensmill Playground Fund</h1>
         <p className="tagline">
-          Help us replace the old play structure at Maple Terrace Park with something
+          Help us replace the old play structure at Queensmill Park with something
           our kids (and knees) deserve.
         </p>
         <ProgressThermometer raised={raised} goal={state.goal} />
