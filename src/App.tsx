@@ -13,6 +13,7 @@ import OurStory from './components/OurStory'
 import PlayQuotes from './components/PlayQuotes'
 import Fundraisers from './components/Fundraisers'
 import RaisedBreakdown from './components/RaisedBreakdown'
+import UpcomingFundraiserWidgets from './components/UpcomingFundraiserWidgets'
 import './App.css'
 
 export default function App() {
@@ -57,6 +58,7 @@ export default function App() {
       <div className="hero-image">
         <PlaygroundIllustration />
       </div>
+      <UpcomingFundraiserWidgets />
       <header className="hero">
         <h1>Queensmill Playground Fund</h1>
         <p className="tagline">

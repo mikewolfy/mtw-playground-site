@@ -5,11 +5,14 @@ export interface PastFundraiser {
   amount: number
 }
 
+export type FundraiserIcon = 'ice-cream' | 'ornament'
+
 export interface UpcomingFundraiser {
   name: string
   organizer: string
   date: string // ISO date
   description?: string
+  icon: FundraiserIcon
 }
 
 export const PAST_FUNDRAISERS: PastFundraiser[] = [
@@ -23,11 +26,18 @@ export const PAST_FUNDRAISERS: PastFundraiser[] = [
 
 export const UPCOMING_FUNDRAISERS: UpcomingFundraiser[] = [
   {
+    name: 'Ice Cream Night',
+    organizer: 'Lisa',
+    date: '2026-09-12',
+    icon: 'ice-cream',
+  },
+  {
     name: 'Fall Craft Fair',
     organizer: 'Lisa',
     date: '2026-10-17',
     description:
       'Handmade crafts, Christmas ornaments, poinsettias, and other Halloween and holiday gifts for sale',
+    icon: 'ornament',
   },
 ]
 
