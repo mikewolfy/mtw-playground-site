@@ -122,11 +122,67 @@
 }
 
 /* Stats */
-.raised-note {
+.raised-breakdown {
   max-width: 34rem;
-  margin: 0.6rem auto 0;
-  color: var(--text-muted);
+  margin: 1rem auto 0;
+}
+
+.raised-breakdown-bar {
+  display: flex;
+  gap: 2px;
+  height: 10px;
+}
+
+.raised-breakdown-segment {
+  height: 100%;
+  min-width: 3px;
+}
+
+.segment-online {
+  background: var(--teal);
+  border-radius: 5px 0 0 5px;
+}
+
+.segment-fundraisers {
+  background: var(--coral);
+  border-radius: 0 5px 5px 0;
+}
+
+.raised-breakdown-legend {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.5rem 1.5rem;
+  margin-top: 0.6rem;
+}
+
+.raised-breakdown-item {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 0.4rem;
   font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+.raised-breakdown-item strong {
+  color: var(--text);
+  font-weight: 700;
+}
+
+.raised-breakdown-swatch {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 3px;
+  align-self: center;
+}
+
+.swatch-online {
+  background: var(--teal);
+}
+
+.swatch-fundraisers {
+  background: var(--coral);
 }
 
 .stats-row {

@@ -12,13 +12,8 @@ import PlaygroundIllustration from './components/PlaygroundIllustration'
 import OurStory from './components/OurStory'
 import PlayQuotes from './components/PlayQuotes'
 import Fundraisers from './components/Fundraisers'
+import RaisedBreakdown from './components/RaisedBreakdown'
 import './App.css'
-
-const currency = new Intl.NumberFormat('en-US', {
-  style: 'currency',
-  currency: 'USD',
-  maximumFractionDigits: 0,
-})
 
 export default function App() {
   const [state, setState] = useState<FundState>(() => loadState())
@@ -70,11 +65,7 @@ export default function App() {
         </p>
         <OurStory />
         <ProgressThermometer raised={raised} goal={state.goal} />
-        <p className="raised-note">
-          Includes {currency.format(PAST_FUNDRAISERS_TOTAL)} raised at neighborhood
-          fundraisers (ice cream days, a lap-a-thon, an ornament sale, and pizza
-          night) — see the full list below.
-        </p>
+        <RaisedBreakdown onlineRaised={onlineRaised} fundraiserRaised={PAST_FUNDRAISERS_TOTAL} />
         <StatsRow
           raised={raised}
           goal={state.goal}
